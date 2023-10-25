@@ -4,7 +4,7 @@
   "description": "An Electric Scooter Hire app system, created using UML, OOP, JS Classes and TDD",
   "main": "Application.js",
   "scripts": {
-    "test": "jest --watch-all --verbose",
+    "test": "jest --verbose",
     "test:coverage": "jest --verbose --collect-coverage"
   },
   "repository": {
@@ -18,7 +18,7 @@
     "url": "https://github.com/MultiverseLearningProducts/scooter-project-solution/issues"
   },
   "homepage": "https://github.com/MultiverseLearningProducts/scooter-project-solution#readme",
-  "dependencies": {
-    "jest": "^27.5.1"
+  "devDependencies": {
+    "jest": "^29.7.0"
   }
 }
