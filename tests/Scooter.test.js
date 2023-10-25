@@ -1,6 +1,7 @@
 const Scooter = require("../src/Scooter");
 const User = require("../src/User");
 
+B;
 //typeof scooter === object
 describe("scooter is object", () => {
   test("scooter class should create Scooter instance", () => {
@@ -40,6 +41,3 @@ describe("test methods", () => {
     expect(testScooter.dock()).toBe("hi");
   });
 });
-
-//Method tests
-describe("scooter methods", () => {});
