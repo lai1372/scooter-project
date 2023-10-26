@@ -1,23 +1,30 @@
+const ScooterApp = require("./ScooterApp");
+
 class Scooter {
   // scooter code here
-  static nextSerial = 0;
-  constructor(station, user, serial, nextSerial, charge, isBroken) {
+  static nextSerial = 1;
+  constructor(station) {
     this.station = station;
-    this.user = user;
-    this.serial = Scooter.nextSerial + 1;
+    this.user = null;
+    this.serial = Scooter.nextSerial;
     this.charge = 100;
     this.isBroken = false;
-    Scooter.nextSerial ++;
+    Scooter.nextSerial++;
   }
 
-  rent(){
-    if(this.isBroken === false && this.charge >= 20){
-
+  rent(user) {
+    if (this.isBroken === false && this.charge >= 20) {
+      this.user = user;
+      ScooterApp.rentScooter(this.Scooter, user);
+    } else if (this.isBroken === true) {
+      throw Error("Needs repair");
+    } else {
+      throw Error("Needs charging");
     }
   }
 
-  dock(){
-    return "hi"
+  dock(station) {
+    ScooterApp.dockScooter(this.Scooter, station)
   }
 }
 

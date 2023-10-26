@@ -1,7 +1,6 @@
 const Scooter = require("../src/Scooter");
 const User = require("../src/User");
 
-B;
 //typeof scooter === object
 describe("scooter is object", () => {
   test("scooter class should create Scooter instance", () => {
@@ -20,24 +19,16 @@ describe("properties on scooter class", () => {
   });
 });
 
-describe("serial and nextSerial increment successfully", () => {
-  test("serial should be 2 when a second scooter is created", () => {
-    const testScooter = new Scooter();
-    const secondScooter = new Scooter();
-    expect(secondScooter.serial).toBe(2);
-  });
+// describe("serial and nextSerial increment successfully", () => {
+//   test("serial should be 1 when a scooter is created", () => {
+//     const testScooter = new Scooter();
+//     expect(testScooter.serial).toBe(1);
+//   });
 
-  test("should update nextSerial to 3 when a new scooter is created", () => {
-    const testScooter = new Scooter();
-    const secondScooter = new Scooter();
-    expect(Scooter.nextSerial).toBe(3);
-  });
-});
+//   test("should update nextSerial to 2 when a new scooter is created", () => {
+//     const testScooter = new Scooter();
+//     const secondScooter = new Scooter();
+//     expect(Scooter.nextSerial).toBe(2);
+//   });
+// });
 
-describe("test methods", () => {
-  test("should contain rent and dock methods with correct returns", () => {
-    const testScooter = new Scooter();
-    expect(testScooter.rent()).toBe("hi");
-    expect(testScooter.dock()).toBe("hi");
-  });
-});

@@ -1,6 +1,7 @@
+const ScooterApp = require("./ScooterApp")
+
 class User {
   // User code here
-  #username
   #password
   #age
   constructor(username, password, age, loggedIn){
@@ -17,6 +18,20 @@ class User {
   getAge(){
     return this.#age
   }
+
+  login(password){
+    const userpw = ScooterApp.registeredUsers
+    console.log(userpw)
+  }
+
+  logout(){
+
+  }
 }
-  
+
+// const register = new ScooterApp()
+// register.registerUser("laila", "123pw", 27)
+// const newuser = new User("laila", "123pw", 27)
+// newuser.login("123pw")
+
 module.exports = User
