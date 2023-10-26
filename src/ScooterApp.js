@@ -12,34 +12,29 @@ class ScooterApp {
       rolandPark: [],
       mountVernon: [],
     };
-    this.registeredUsers = {};
+    this.registeredUsers = {
+    };
   }
 
-
-  registerUser(username, password, age){
+  registerUser(username, password, age) {
+    if (age > 18){
+      this.registeredUsers[username] = username
+    } else {
+      throw Error("User is underage")
+    }
   }
 
-  loginUser(username, password){
-  }
+  loginUser(username, password) {}
 
-  logoutUser(username){
-  }
+  logoutUser(username) {}
 
-  createScooter(station){
+  createScooter(station) {}
 
-  }
+  dockScooter(scooter, station) {}
 
-  dockScooter(scooter, station){
+  rentScooter(scooter, user) {}
 
-  }
-
-  rentScooter(scooter, user){
-
-  }
-
-  print(){
-    
-  }
+  print() {}
 }
 
 module.exports = ScooterApp;
