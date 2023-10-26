@@ -18,5 +18,5 @@ class User {
     return this.#age
   }
 }
-
+  
 module.exports = User
