@@ -21,7 +21,6 @@ class User {
 
   login(password){
     const userpw = ScooterApp.registeredUsers
-    console.log(userpw)
   }
 
   logout(){
@@ -29,6 +28,11 @@ class User {
   }
 }
 
+describe('Name of the group', () => {
+  test('should ', () => {
+    expect()
+  });
+});
 // const register = new ScooterApp()
 // register.registerUser("laila", "123pw", 27)
 // const newuser = new User("laila", "123pw", 27)
