@@ -40,10 +40,8 @@ describe("methods return correct values", () => {
       testApp.registerUser("sam", "123pw", 17);
     }).toThrow("User is underage");
   });
-});
 
-describe.only("create scooter works", () => {
-  test("should add scooter to stations when new one is created", () => {
+  test("createScooter should add scooter to stations when new one is created", () => {
     const newScooterApp = new ScooterApp();
     newScooterApp.createScooter("canton");
     expect(newScooterApp.stations).toEqual({
@@ -63,4 +61,23 @@ describe.only("create scooter works", () => {
       mountVernon: [],
     });
   });
+  test("createScooter should return the new scooter", () => {
+    const newScooterApp = new ScooterApp();
+    expect(newScooterApp.createScooter("canton")).toEqual({
+      charge: 100,
+      isBroken: false,
+      serial: 2,
+      station: "canton",
+      user: null,
+    });
+  });
+
+  test("createScooter should throw an error if station doesnt exist", () => {
+    const newScooterApp = new ScooterApp();
+    expect(() => {
+      newScooterApp.createScooter("london").toThrow("no such station");
+    });
+  });
 });
+
+describe("create scooter works", () => {});
