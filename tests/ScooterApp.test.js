@@ -41,3 +41,26 @@ describe("methods return correct values", () => {
     }).toThrow("User is underage");
   });
 });
+
+describe.only("create scooter works", () => {
+  test("should add scooter to stations when new one is created", () => {
+    const newScooterApp = new ScooterApp();
+    newScooterApp.createScooter("canton");
+    expect(newScooterApp.stations).toEqual({
+      canton: [
+        {
+          charge: 100,
+          isBroken: false,
+          serial: 1,
+          station: "canton",
+          user: null,
+        },
+      ],
+      hampden: [],
+      pigtown: [],
+      remington: [],
+      rolandPark: [],
+      mountVernon: [],
+    });
+  });
+});

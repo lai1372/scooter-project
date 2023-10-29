@@ -1,5 +1,5 @@
-const User = require("./User");
 const Scooter = require("./Scooter");
+const User = require("./User");
 
 class ScooterApp {
   // ScooterApp code here
@@ -44,7 +44,7 @@ class ScooterApp {
   createScooter(station) {
     if (this.stations[station]) {
       const newScooter = new Scooter(station);
-      this.stations[station] = newScooter;
+      this.stations[station].push(newScooter);
       console.log("created a new scooter");
       return newScooter;
     } else {

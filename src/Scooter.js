@@ -1,4 +1,4 @@
-const ScooterApp = require("./ScooterApp");
+// const ScooterApp = require("./ScooterApp");
 
 class Scooter {
   // scooter code here
@@ -24,7 +24,7 @@ class Scooter {
   }
 
   dock(station) {
-    ScooterApp.dockScooter(this.Scooter, station)
+    ScooterApp.dockScooter(this.Scooter, station);
   }
 }
 
